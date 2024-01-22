@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lucianoalbuquerque18gmail.app.simplelist0110.Lista">
+
+  <item
+      android:id="@+id/action_home"
+      android:icon="@drawable/round_house_black_36"
+      android:orderInCategory="1"
+      android:title="Página Inicial"
+      app:showAsAction="never|ifRoom" />
+
+  <item
+      android:icon="@drawable/ic_baseline_more_vert_24"
+      android:title=""
+      android:orderInCategory="2"
+      app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/todasListas"
+                android:icon="@android:drawable/ic_menu_sort_by_size"
+                android:title="Relação de todas as listas."/>
+
+                <item
+                    android:id="@+id/desmarca_tudo"
+                    android:icon="@android:drawable/checkbox_off_background"
+                    android:title="Desmarcar Tudo" />
+
+                <item
+                    android:id="@+id/action_excluir_tudo"
+                    android:icon="@android:drawable/ic_menu_delete"
+                    android:title="@string/title_action_excluir_tudo" />
+
+
+                <item
+                    android:id="@+id/menuSair"
+                    android:icon="@android:drawable/ic_menu_close_clear_cancel"
+                    android:title="Sair" />
+            </menu>
+      </item>
+
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array name="tipos">
+        <item ><u>1-Alta</u></item>
+        <item><u>2-Media</u></item>
+        <item><u>3-Baixa</u></item>
+    </string-array>
+</resources>

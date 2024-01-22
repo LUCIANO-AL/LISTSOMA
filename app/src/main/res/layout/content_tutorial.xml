@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Tutorial"
+    android:background="@drawable/contornofino"
+    android:orientation="vertical"
+    tools:showIn="@layout/act_tela_tutorial">
+
+
+  <LinearLayout
+      android:id="@+id/linearLayout20"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:background="?attr/selectableItemBackground"
+      android:onClick="RelacaoListas"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+    <ImageView
+        android:id="@+id/imgV_Relacao_List"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_youtube_new_foreground" />
+    <TextView
+        android:id="@+id/textView241"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:text="Primeira Lista e Copiar Lista"
+        android:textSize="16sp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/linearLayout21"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:background="?attr/selectableItemBackground"
+      android:onClick="L_Compras"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout20">
+
+    <ImageView
+        android:id="@+id/imageV_List_Compras"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_youtube_new_foreground" />
+
+    <TextView
+        android:id="@+id/textView242"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:text="Atualizar e excluir itens da lista de compras"
+        android:textSize="16sp" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/linearLayout22"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:background="?attr/selectableItemBackground"
+      android:onClick="L_Tarefa"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout21">
+
+    <ImageView
+        android:id="@+id/imageV_ListTarefa"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_youtube_new_foreground" />
+
+    <TextView
+        android:id="@+id/textView243"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:text="Compartilhamento de lista de compras"
+        android:textSize="16sp" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/linearLayout23"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:background="?attr/selectableItemBackground"
+      android:onClick="L_Dividas"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout22">
+
+    <ImageView
+        android:id="@+id/imageV_ListDividas"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_youtube_new_foreground" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:text="Importa lista de compras"
+        android:textSize="16sp" />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/textView18"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="24dp"
+      android:text="Click nos botões abaixo e acesse os tutorias no You Tube, aproveite se inscreva no canal e de like nos videos."
+      android:textAlignment="center"
+      android:textAllCaps="false"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  <com.google.android.gms.ads.AdView
+      android:id="@+id/adView4"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_gravity="center_horizontal|bottom"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"
+      app:adSize="LARGE_BANNER"
+      app:adUnitId="@string/banner_ad_unit_id4"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent">
+
+  </com.google.android.gms.ads.AdView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

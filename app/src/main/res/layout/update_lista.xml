@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Lista">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/contornofino"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtIdItemUpdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="id item" />
+
+        <TextView
+            android:id="@+id/txtIDListaUpdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="id Lista" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewUpdtListaCompras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="5dp"
+            app:adSize="BANNER"
+            app:adUnitId="@string/banner_ad_unit_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.google.android.gms.ads.AdView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:text="Alterar item da lista"
+            android:textAllCaps="false"
+            android:textColor="@color/black_de"
+            android:textSize="19sp"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/listTarefas_But"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:elevation="20dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <CheckBox
+                    android:id="@+id/checkB_Upd"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:duplicateParentState="false"
+                    android:text="Ok"
+                    android:visibility="invisible"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/edtPreco_Upd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:backgroundTint="@color/black_de"
+                    android:gravity="center"
+                    android:hint="R$"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAllCaps="false"
+                    android:textColorHighlight="?attr/colorPrimary"
+                    android:textColorLink="@color/black_de"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edtQuant_Upd"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <EditText
+                    android:id="@+id/edtQuant_Upd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/black_de"
+                    android:gravity="center"
+                    android:hint="@string/lbl_quant"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/edtPreco_Upd"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColorHighlight="?attr/colorPrimary"
+                    android:textColorLink="@color/black_de"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/edtPreco_Upd"
+                    app:layout_constraintStart_toEndOf="@+id/edtItemLista_Upd"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+                <EditText
+                    android:id="@+id/edtItemLista_Upd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/black_de"
+                    android:gravity="center_vertical"
+                    android:hint="Item"
+                    android:inputType="textCapSentences"
+                    android:nextFocusDown="@+id/edtQuant_Upd"
+                    android:paddingLeft="10dp"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColorHighlight="?attr/colorPrimary"
+                    android:textColorLink="@color/black_de"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/edtQuant_Upd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Item"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toTopOf="@+id/edtItemLista_Upd"
+                    app:layout_constraintEnd_toStartOf="@+id/textView12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Quant"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView13"
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginLeft="43dp"
+                    android:layout_marginEnd="45dp"
+                    android:layout_marginRight="45dp"
+                    android:text="R$"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView12"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listTarefas_But"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/edtId_Upd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/butonVoltar_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="8dp"
+                    android:elevation="10dp"
+                    android:text="voltar"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnEdit_Upd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textStyle="bold"
+                    android:elevation="10dp"
+                    android:onClick="onClick"
+                    android:text="@string/title_updt_button"
+                    tools:ignore="OnClick" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

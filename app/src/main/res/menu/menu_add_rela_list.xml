@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:id="@+id/action_home"
+      android:icon="@drawable/round_house_black_36"
+      android:orderInCategory="1"
+      android:title="Página Inicial"
+      app:showAsAction="never|ifRoom" />
+
+  <item
+      android:icon="@drawable/ic_baseline_more_vert_24"
+      android:title=""
+      app:showAsAction="always"
+      android:orderInCategory="2">
+    <menu>
+      <item
+          android:id="@+id/menuSair"
+          android:title="Sair"
+          android:icon="@android:drawable/ic_menu_close_clear_cancel"
+          android:orderInCategory="1"/>
+
+
+      <item
+          android:id="@+id/action_excluir_tudo"
+          android:icon="@android:drawable/ic_menu_delete"
+          android:orderInCategory="3"
+          android:title="@string/title_action_excluir_tudo"
+          android:visible="false"
+          app:showAsAction="never|ifRoom" />
+
+      <item
+          android:id="@+id/importWhatsAppBusiness"
+          android:icon="@android:drawable/ic_menu_upload"
+          android:orderInCategory="4"
+          android:title="Importa lista do WhatsApp Business"
+          android:visible="true"
+          app:showAsAction="ifRoom" />
+
+      <item
+          android:id="@+id/importCompras_xlsx"
+          android:icon="@android:drawable/ic_menu_upload"
+          android:orderInCategory="5"
+          android:title="Importa lista do WhatsApp"
+          app:showAsAction="ifRoom" />
+    </menu>
+
+  </item>
+
+</menu>

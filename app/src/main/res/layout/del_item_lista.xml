@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Lista">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="20dp"
+        android:background="@drawable/contornofino"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="18dp"
+            android:text="EXCLUIR"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black_de"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/listTarefas_But"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/black_de"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="18dp"
+                    android:text="Excluir item da lista"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtItemLista_Del"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:autoText="false"
+                    android:backgroundTint="@color/primaryColor"
+                    android:gravity="center_vertical"
+                    android:hint="@string/lbl_nome_item"
+                    android:inputType="textCapSentences"
+                    android:nextFocusDown="@+id/edtPreco_Del"
+                    android:paddingLeft="10dp"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    android:textColorHighlight="?attr/colorPrimary"
+                    android:textColorHint="@color/cinza_claro"
+                    android:textColorLink="@color/primaryColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/edtQuant_Del"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="7dp"
+                    tools:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edtPreco_Del"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:gravity="center"
+                    android:hint="R$"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@+id/edtQuant_Del"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textColorHighlight="?attr/colorPrimary"
+                    android:textColorHint="@color/cinza_claro"
+                    android:textColorLink="@color/primaryColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="358dp"
+                    tools:layout_editor_absoluteY="7dp"
+                    tools:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edtQuant_Del"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:gravity="center"
+                    android:hint="@string/lbl_quant"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/edtPreco_Del"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    android:textColorHighlight="?attr/colorPrimary"
+                    android:textColorHint="@color/cinza_claro"
+                    android:textColorLink="@color/primaryColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/edtPreco_Del"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="7dp"
+                    tools:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/checkB_Del"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:duplicateParentState="false"
+                    android:text="Ok"
+                    android:visibility="invisible"
+                    tools:ignore="MissingConstraints"
+                    tools:visibility="gone" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listTarefas_But"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/butonVoltar_Del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="8dp"
+                    android:elevation="10dp"
+                    android:scrollbarThumbHorizontal="?attr/colorControlActivated"
+                    android:text="NÃO"
+                    android:textStyle="bold"
+                    app:srcCompat="@drawable/baseline_clear_black_36" />
+
+
+                <Button
+                    android:id="@+id/btnDell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+
+                    android:elevation="10dp"
+                    android:onClick="onClick"
+                    android:scrollbarThumbHorizontal="?attr/colorControlActivated"
+                    android:text="SIM"
+                    tools:ignore="OnClick" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtId_Upd"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="17sp"
+                android:visibility="invisible"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="377dp"
+                tools:layout_editor_absoluteY="1dp"
+                tools:visibility="invisible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
